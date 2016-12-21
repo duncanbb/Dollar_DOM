@@ -1,4 +1,4 @@
-= dollar-DOM -- Lightweight and easy HTML document traversal and manipulation
+# dollar-DOM -- Lightweight and easy HTML document traversal and manipulation
 
 dollar-DOM is a fast, lightweight JavaScript library that makes for easy event
 handling, AJAX requests, and HTML element manipulation.
@@ -6,6 +6,7 @@ A short rundown of some of the major features:
 
 * DOM manipulation through methods like .on to add eventHandler callbacks:
 
+``` Javascript
   on(eventName, callback) {
     this.htmls.forEach(node => {
       node.addEventListener(eventName, callback);
@@ -16,9 +17,11 @@ A short rundown of some of the major features:
       node[eventKey].push(callback);
     });
   }
+```
 
 Append which allows elements to be added to the page:
 
+``` Javascript
   append(children){
     if (typeof children === 'object' &&
       !(children instanceof DOMNodeCollection)) {
@@ -35,9 +38,11 @@ Append which allows elements to be added to the page:
       });
     }
   }
+```
 
 * Perform asynchronous AJAX requests.
 
+``` Javascript
   $l.ajax = (request) => {
     const defaults = {
       method: "GET",
@@ -63,3 +68,4 @@ Append which allows elements to be added to the page:
       xhr.send(JSON.stringify(options.data));
 
   };
+```
