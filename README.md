@@ -4,7 +4,8 @@ dollar-DOM is a fast, lightweight JavaScript library that makes for easy event
 handling, AJAX requests, and HTML element manipulation.
 A short rundown of some of the major features:
 
-* DOM manipulation through methods like .on to add eventHandler callbacks
+* DOM manipulation through methods like .on to add eventHandler callbacks:
+
   on(eventName, callback) {
     this.htmls.forEach(node => {
       node.addEventListener(eventName, callback);
